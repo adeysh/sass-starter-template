@@ -1,0 +1,17 @@
+@use "sass:math";
+
+// Source: https://css-tricks.com/snippets/sass/px-to-em-functions/
+@function rem($pixels, $context: 16) {
+    @return (math.div($pixels, $context)) * 1rem;
+}
+
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin grid-center {
+    display: grid;
+    place-content: center;
+}
